@@ -164,7 +164,7 @@ Yii::app()->getClientScript()->registerScript("GeneralOption-confirm-language", 
                         'name'          => 'adminbutton',
                         'checkedOption' => ($bShowInherited && $admin === 'inherit' ? 'Y' : 'N'),
                         'selectOptions' => $optionsOnOff,
-                        'ariaLabel'    => gT('inherit'),
+                        'ariaLabel'    => gT('Inherit:'),
                         'htmlOptions'   => [
                             'class' => 'text-option-inherit'
                         ]
@@ -191,7 +191,7 @@ Yii::app()->getClientScript()->registerScript("GeneralOption-confirm-language", 
                         'name'          => 'adminemailbutton',
                         'checkedOption' => ($bShowInherited && $adminemail === 'inherit' ? 'Y' : 'N'),
                         'selectOptions' => $optionsOnOff,
-                        'ariaLabel'    => gT('inherit'),
+                        'ariaLabel'    => gT('Inherit:'),
                         'htmlOptions'   => [
                             'class' => 'text-option-inherit'
                         ]
@@ -219,7 +219,7 @@ Yii::app()->getClientScript()->registerScript("GeneralOption-confirm-language", 
                         'name'          => 'bounce_emailbutton',
                         'checkedOption' => ($bShowInherited && $bounce_email === 'inherit' ? 'Y' : 'N'),
                         'selectOptions' => $optionsOnOff,
-                        'ariaLabel'    => gT('inherit'),
+                        'ariaLabel'    => gT('Inherit:'),
                         'htmlOptions'   => [
                             'class' => 'text-option-inherit '
                         ]
@@ -315,7 +315,7 @@ Yii::app()->getClientScript()->registerScript("GeneralOption-confirm-language", 
                     'name'          => 'format',
                     'checkedOption'         => $oSurvey->format,
                     'selectOptions' => $formatSelectOptions,
-                    'ariaLabel'    => gT(' format'),
+                    'ariaLabel'    => gT('Format:'),
                 ]); ?>
             </div>
         </div>

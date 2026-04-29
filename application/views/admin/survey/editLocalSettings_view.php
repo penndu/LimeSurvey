@@ -32,7 +32,7 @@ echo viewHelper::getViewTestTag('surveyTexts');
     <div class="row mb-3">
         <div class="col-lg-6">
             <!-- Survey title -->
-            <label class=" question-group-title form-label" for="short_title_<?=$aSurveyLanguageSettings['surveyls_language']; ?>">
+            <label class=" question-group-title form-label" for="short_title_<?= $aSurveyLanguageSettings['surveyls_language'] ?>">
                 <?php eT("Survey title:"); ?>
             </label>
             <?php echo CHtml::textField(
@@ -48,7 +48,7 @@ echo viewHelper::getViewTestTag('surveyTexts');
     <div class="row mb-3">
         <div class="col-lg-4">
             <!-- Date format -->
-            <label class="form-label " for="dateformat_<?php echo $aSurveyLanguageSettings['surveyls_language']; ?>">
+            <label class="form-label " for="dateformat_<?= $aSurveyLanguageSettings['surveyls_language'] ?>">
                 <?php eT("Date format:"); ?>
             </label>
             <select size='1' id='dateformat_<?php echo $aSurveyLanguageSettings['surveyls_language']; ?>' 
