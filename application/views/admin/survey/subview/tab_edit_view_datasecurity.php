@@ -91,7 +91,7 @@ PrepareEditorScript(false, $this);
         <?php endforeach; ?>
     </div>
     <div class="tab-content">
-        <?php foreach ($aTabContents as $i => $sTabContent) : ?>
+        <?php foreach ($aTabContents as $i => $sTabContent): ?>
             <?php
             echo $sTabContent;
             ?>
