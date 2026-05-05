@@ -56,9 +56,11 @@
             <div class=''></div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" role="group" aria-labelledby="email_actions_label_<?php echo CHtml::encode($grouplang); ?>_<?php echo CHtml::encode($tab); ?>">
         <div class='mb-3 col-md-12'>
-            <label class=' form-label' id="actions-label-<?= $grouplang ?>-<?= $tab ?>"><?php et('Actions:');?></label>
+            <label class=' form-label' id="actions-label-<?= $grouplang ?>-<?= $tab ?>">
+                <?php et('Actions:');?>
+            </label>
             <div class=''>
                 <button type="button" class='btn btn-outline-secondary'
                    id="validate_expression_<?=$grouplang?>_<?=$tab?>"
@@ -91,11 +93,20 @@
     <?php
     if (Permission::model()->hasSurveyPermission($surveyid, 'surveycontent', 'update'))
     { ?>
-    <div class="row">
-            <label class='form-label col-12' id="attachments-label-<?= $grouplang ?>-<?= $tab ?>" for="add-attachment-<?php echo "{$grouplang}-{$tab}"; ?>"><?php echo $details['attachments']; ?></label>
-            <div class="col-12">
-                <button class="add-attachment btn btn-outline-secondary" data-target="#attachments-<?php echo $grouplang; ?>-<?php echo $tab ?>" data-ck-target="<?="email_{$tab}_{$grouplang}"?>" id="add-attachment-<?php echo "{$grouplang}-{$tab}"; ?>" aria-describedby="attachments-label-<?= $grouplang ?>-<?= $tab ?>"><?php eT("Add file"); ?></button> &nbsp;
-            </div>
+    <div class="row"  role="group" aria-labelledby="email_attachments_label_<?php echo CHtml::encode($grouplang); ?>_<?php echo CHtml::encode($tab); ?>">
+            <label class='form-label col-12'
+                   id="email_attachments_label_<?php echo CHtml::encode($grouplang); ?>_<?php echo CHtml::encode($tab); ?>"
+                   for="add-attachment-<?php echo "{$grouplang}-{$tab}"; ?>">
+                <?php echo $details['attachments']; ?>
+            </label>
+        <div class="col-12">
+            <button class="add-attachment btn btn-outline-secondary"
+                    data-target="#attachments-<?php echo $grouplang; ?>-<?php echo $tab ?>"
+                    data-ck-target="<?= "email_{$tab}_{$grouplang}" ?>"
+                    id="add-attachment-<?php echo "{$grouplang}-{$tab}"; ?>"
+                    aria-describedby="attachments-label-<?= $grouplang ?>-<?= $tab ?>"><?php eT("Add file"); ?>
+            </button>
+        </div>
     </div>
 
 
